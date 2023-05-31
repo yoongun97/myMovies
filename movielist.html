@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MY MOVIES</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>스파르타 피디아</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" type="text/css" href="./movielist.css" />
     <script src="./movielist.js"></script>
   </head>
   <body>
-    <section id="project">
-      <p class="project-info-1">내배캠 영화 컬렉션</p>
-      <h1 class="project-name">MY MOVIES</h1>
-    </section>
+    <div class="mytitle">
+      <h1>내배캠 영화 컬렉션</h1>
+      <div class="search">
+        <input type="text" placeholder="검색어 입력" />
+        <div class="searchButton" onclick="search()"></div>
+      </div>
+    </div>
+
+    <div class="mycards">
+      <div class="cards-box" id="cards-box">
+        <div class="card" onclick="showID()">
+          <img
+            src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h5 class="card-title">영화 제목이 들어갑니다</h5>
+            <p class="card-text">여기에 영화에 대한 설명이 들어갑니다.</p>
+            <p class="score">평점이 들어갑니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

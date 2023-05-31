@@ -1,3 +1,170 @@
-#project {
+* {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+.mytitle {
+  width: 100%;
+  height: 400px;
+
+  /* background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg");
+  background-position: center;
+  background-size: cover; */
+  background-color: gray;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-box {
+  max-width: 1500px;
+  width: 95%;
+  margin: 20px auto 0px auto;
+
+  display: flex;
+  /* flex-direction: row wrap; */
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: burlywood;
+}
+
+.card {
+  border-radius: 20px;
+
+  height: 800px;
+  width: calc(33.33% - 10px);
+  min-width: 270px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+
+  overflow: visible;
+
+  background-color: gold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.imageBox {
+  height: 375px;
+
+  overflow: hidden;
+
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+.card-img-top {
+  height: 375px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.card-body {
+  margin-left: 15px;
+
+  height: 1000px;
+
+  position: relative;
+}
+
+.card-title {
+  font-size: 23px;
+  /* background-color: gray; */
+  margin: 0px -5px 0 0;
+}
+
+.card-text {
+  color: gray;
+
+  height: 90%;
+  max-height: 300px;
+
+  white-space: normal;
+
+  text-align: left;
+
+  word-wrap: break-word;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.search {
+  position: relative;
+
+  width: 130px;
+
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+
   background-color: beige;
+
+  width: 40%;
+  height: 100px;
+  margin: 20px auto;
+
+  border: 1px solid #bbb;
+  border-radius: 30px;
+}
+
+.search > input {
+  width: 80%;
+  height: 40px;
+
+  border: none;
+
+  padding: 10px 12px;
+  font-size: 20px;
+
+  margin-left: 10px;
+}
+
+.searchButton {
+  width: 150px;
+  height: 50px;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png");
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  margin-left: -20px;
+
+  border: 1px gold;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+
+  opacity: 0.35;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
 }

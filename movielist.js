@@ -7,38 +7,73 @@ const options = {
   },
 };
 
-fetch(
-  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
-  options
-)
-  .then((response) => response.json())
-  // .then((response) => console.log(response))
-  .then((data) => {
-    const movies = data.results; // 영화 목록 추출
+function Moviefiltering() {
+  fetch(
+    "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+    options
+  )
+    .then((response) => response.json())
+    // .then((response) => console.log(response))
+    .then((data) => {
+      const movies = data.results; // 영화 목록 추출
 
-    const movieArea = document.getElementById("cards-box"); // 영화를 추가할 HTML 영역 선택
+      const movieArea = document.getElementById("cards-box"); // 영화를 추가할 HTML 영역 선택
 
-    let html = ""; // HTML 템플릿 문자열 초기화
+      const movInput = document.getElementById("movInput").value; // input 속성 받아오기
 
-    movies.forEach((movie) => {
-      html += `
-                <div class="card">
-                  <img
-                   src= "https://image.tmdb.org/t/p/w500/${movie.poster_path}"
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                   <h5 class="card-title">${movie.title}</h5>
-                    <p class="card-text">${movie.overview}</p>
-                    <p>rate : ${movie.vote_average}</p>
-                  </div>
-                </div>
-              `; // HTML 템플릿에 카드 추가
-    });
-    console.log(html);
+      let html = ""; // HTML 템플릿 문자열 초기화
 
-    movieArea.innerHTML = html; // HTML 영역에 템플릿 문자열 삽입
-  })
-  .catch((err) => console.error(err));
+      const filteredMovies = movies.filter((movie) => {
+        return movie.title.toLowerCase().includes(movInput.toLowerCase());
+      }); // 받아온 data filtering하기
 
-function search() {}
+      filteredMovies.forEach((movie) => {
+        html += `
+                                  <div class="card" onclick="showId(${movie.id})">
+                                  <img
+                                  src= "https://image.tmdb.org/t/p/w500/${movie.poster_path}"
+                                      class="card-img-top"
+                                  />
+                                  <div class="card-body">
+                                  <h5 class="card-title">${movie.title}</h5>
+                                      <p class="card-text">${movie.overview}</p>
+                                      <p>rate : ${movie.vote_average}</p>
+                                  </div>
+                                  </div>
+                              `; // HTML 템플릿에 카드 추가
+      });
+
+      movieArea.innerHTML = html; // HTML 영역에 템플릿 문자열 삽입
+    })
+    .catch((err) => console.error(err));
+}
+
+Moviefiltering();
+
+function showId(id) {
+  alert("영화 id: " + id);
+}
+
+window.addEventListener("load", function () {
+  const searchInput = document.getElementById("movInput");
+  searchInput.focus();
+});
+
+const searchButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("movInput");
+
+// searchInput.addEventListener("keydown", function (event) {
+//   if (event.key === "Enter") {
+//     event.preventDefault(); // 기본 동작인 폼 제출 방지
+//     Moviefiltering();
+//   }
+// });
+
+let input = document.getElementById("movInput");
+
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    alert("동작");
+  }
+});

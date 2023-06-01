@@ -52,28 +52,18 @@ Moviefiltering();
 
 function showId(id) {
   alert("영화 id: " + id);
-}
+}  // 카드 선택 시 di 보여주기 
 
 window.addEventListener("load", function () {
   const searchInput = document.getElementById("movInput");
-  searchInput.focus();
+  searchInput.focus();  // window load 시 검색창 고정
 });
 
-const searchButton = document.getElementById("searchButton");
-const searchInput = document.getElementById("movInput");
 
-// searchInput.addEventListener("keydown", function (event) {
-//   if (event.key === "Enter") {
-//     event.preventDefault(); // 기본 동작인 폼 제출 방지
-//     Moviefiltering();
-//   }
-// });
-
-let input = document.getElementById("movInput");
-
-input.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-    event.preventDefault();
-    alert("동작");
+    // 실행할 기능 작성
+    Moviefiltering();
+    // Enter key 기능 
   }
 });

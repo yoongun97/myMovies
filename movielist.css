@@ -6,15 +6,15 @@
   width: 100%;
   height: 400px;
 
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("https://movie-phinf.pstatic.net/20210715_95/1626338192428gTnJl_JPEG/movie_image.jpg");
+    url("https://cdn.pixabay.com/photo/2015/03/13/11/10/hall-of-fame-671538_1280.jpg");
   background-position: center;
-  background-size: cover; */
-  background-color: gray;
+  background-size: cover;
+  /* background-color: gray; */
   color: white;
 
   display: flex;
@@ -24,9 +24,8 @@
 }
 
 .cards-box {
-  max-width: 1500px;
-  width: 95%;
-  margin: 20px auto 0px auto;
+  width: 100%;
+  margin: 0px auto 0px auto;
 
   display: flex;
   /* flex-direction: row wrap; */
@@ -40,20 +39,23 @@
 }
 
 .card {
-  border-radius: 20px;
+  border-radius: 10px;
 
   height: 800px;
   width: calc(33.33% - 10px);
   min-width: 270px;
+  max-width: 270px;
 
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   margin-right: 5px;
   margin-left: 5px;
 
+  padding-top: 20px;
+
   overflow: visible;
 
-  background-color: gold;
+  background-color: brown;
 
   display: flex;
   flex-direction: column;
@@ -74,14 +76,12 @@
 
   display: flex;
   align-items: center;
-
-  margin-top: 30px;
 }
 
 .card-img-top {
   height: 375px;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .card-body {
@@ -99,7 +99,7 @@
 }
 
 .card-text {
-  color: gray;
+  color: orange;
 
   height: 90%;
   max-height: 300px;
@@ -115,6 +115,10 @@
   -webkit-box-orient: vertical;
 }
 
+.score {
+  margin-bottom: 0;
+}
+
 .search {
   position: relative;
 
@@ -125,7 +129,7 @@
   /* justify-content: center; */
   align-items: center;
 
-  background-color: beige;
+  background-color: black(0.3);
 
   width: 40%;
   height: 100px;
@@ -150,7 +154,7 @@
 .searchButton {
   width: 150px;
   height: 50px;
-  background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png");
+  background-image: url("https://img.icons8.com/?size=1x&id=p8VkXMjDOpcE&format=png");
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
@@ -164,7 +168,6 @@
 .searchButton:hover {
   cursor: pointer;
 
-  opacity: 0.35;
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
 }

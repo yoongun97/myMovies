@@ -52,18 +52,17 @@ Moviefiltering();
 
 function showId(id) {
   alert("영화 id: " + id);
-}  // 카드 선택 시 di 보여주기 
+} // 카드 선택 시 di 보여주기
 
 window.addEventListener("load", function () {
   const searchInput = document.getElementById("movInput");
-  searchInput.focus();  // window load 시 검색창 고정
+  searchInput.focus(); // window load 시 검색창 고정
 });
-
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     // 실행할 기능 작성
     Moviefiltering();
-    // Enter key 기능 
+    // Enter key 기능
   }
 });

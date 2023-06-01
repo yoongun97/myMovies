@@ -21,14 +21,17 @@
     <div class="mytitle">
       <h1>내배캠 영화 컬렉션</h1>
       <div class="search">
-        <input type="text" placeholder="검색어 입력" />
-        <div class="searchButton" onclick="search()"></div>
+        <input id="movInput" type="text" placeholder="검색어 입력" />
+        <div
+          class="searchButton"
+          id="searchButton"
+          onclick="Moviefiltering()"
+        ></div>
       </div>
     </div>
-
     <div class="mycards">
       <div class="cards-box" id="cards-box">
-        <div class="card" onclick="showID()">
+        <div class="card">
           <img
             src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
             class="card-img-top"

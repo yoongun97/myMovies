@@ -15,37 +15,25 @@
     />
 
     <link rel="stylesheet" type="text/css" href="./movielist.css" />
-    <script src="./movielist.js"></script>
+    <script type="module" src="./movielist.js"></script>
   </head>
   <body>
     <div class="mytitle">
       <h1>내배캠 영화 컬렉션</h1>
       <div class="search">
         <input id="movInput" type="text" placeholder="검색어 입력" />
-        <div
-          class="searchButton"
-          id="searchButton"
-          onclick="Moviefiltering()"
-        ></div>
+        <div class="searchButton" id="searchButton"></div>
       </div>
     </div>
     <div class="mycards">
       <div class="cards-box" id="cards-box">
-        <div class="card">
-          <img
-            src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
-            class="card-img-top"
-          />
-          <div class="card-body">
-            <h5 class="card-title">영화 제목이 들어갑니다</h5>
-            <p class="card-text">여기에 영화에 대한 설명이 들어갑니다.</p>
-            <p class="score">평점이 들어갑니다.</p>
-          </div>
-        </div>
+        <div class="card" id="card"></div>
       </div>
     </div>
     <footer id="footer">
       <p>영화 검색 사이트 by TMDB</p>
     </footer>
+
+    ;
   </body>
 </html>
